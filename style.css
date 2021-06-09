@@ -228,6 +228,38 @@ select{
     border-radius: 10px;
     
 }
+.container-scroll{
+    height: 100vh;
+}
+.scroll{
+    overflow-x: scroll;
+    height: 100vh;
+    height: 700px;
+}
+.img{
+    display: flex;
+}
+.img img{
+    margin-left: 5px;
+    width: 500px;
+    height: auto;
+}
+#titulo-scroll{
+    font-family: 'Dancing Script';
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 10px 10px 10px black;
+    text-transform: uppercase;
+    margin: 70px 0px;
+    color: white;
+}
+.line-scroll{
+    width: 500px;
+    height: 8px;
+    background-color: rgb(255, 81, 0);
+    box-shadow: 2px 2px 5px black;
+    margin: 10px auto;
+}
 @keyframes zoom {
     0%{
         transform: scale(1.3);
