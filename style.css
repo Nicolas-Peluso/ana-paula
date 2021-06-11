@@ -35,18 +35,23 @@ select{
     background: transparent;
     color: white;
 }
-
+.iconify[data-icon="mdi:arrow-up-bold-circle"]{
+    position: fixed;
+    color: rgb(255, 136, 0);
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
 .imagem{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    
 }
 .imagem img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: .8;
+    opacity: 1;
     overflow: hidden;
     animation: zoom 15s linear;
 }
@@ -106,10 +111,12 @@ select{
 .otheroption img{
     width: 50px;
     object-fit: cover;
-    
 }
 .otheroption .falecom{  
     text-decoration: underline;
+}
+.bolosNav{
+    cursor: pointer;
 }
 .falecom{
     border-right: 20px double orange;
@@ -218,6 +225,7 @@ select{
     border-left: 5px solid orange;
     padding-left: 5px;
 }
+
 .iconify{
     font-size: 4em;
     color: black;
@@ -226,7 +234,6 @@ select{
 .insta{
     background: linear-gradient(180deg, red, purple);
     border-radius: 10px;
-    
 }
 .container-scroll{
     height: 100vh;

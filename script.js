@@ -127,3 +127,41 @@ function simulation(Pedaços, Recheio, Massa, Enfeite){
       div.style.display = "block"
 
     }
+
+
+var btn = document.querySelector(".button-info")
+var simulaPage = document.querySelector(".containerSimula")
+var heigthSimula = simulaPage.clientHeight
+
+btn.addEventListener("click", e => scrollSimula(heigthSimula))
+
+var btnNav = document.querySelector(".bolosNav")
+var cakePage = document.querySelector(".container-scroll") 
+var heigthCake = cakePage.clientHeight
+
+btnNav.addEventListener("click", ex => cake(heigthCake))
+
+var image = document.querySelector(".imagem")
+var btn = document.querySelector(".goBackTop")
+var heigthImage = image.clientHeight
+
+btn.addEventListener("click", er => scrollTop())
+
+function scrollTop(){
+    window.scrollTo({
+        top: heigthImage - 959,
+        behavior: "smooth"
+    })
+}
+function scrollSimula(h){
+        window.scrollTo({
+            top: h + 350,
+            behavior:"smooth"
+    })
+}
+function cake(hC){
+    window.scrollTo({
+        top: hC + 600,
+        behavior: "smooth"
+    })
+}
