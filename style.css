@@ -29,7 +29,7 @@ option{
 }
 select{
     text-transform: uppercase;
-    padding: 10px;
+    padding: 0px;
     outline: none;
     border: none;
     background: transparent;
@@ -69,10 +69,12 @@ select{
 .info h1{
     font-size: 1.8em;
     font-weight: lighter;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.705);
 }
 .info p{
     font-size: 1.5em;
     margin: 20px 0px 0px 0px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.671);
 }
 .info button{
     width: 100%;
@@ -85,10 +87,14 @@ select{
     cursor: pointer;
     outline: none;
     border: none;
+    box-shadow: 10px 10px 10px black;
 }
 .info button:hover{
-    transition: 80ms linear;
-    height: 60px;
+    transition: 200ms linear;
+    box-shadow: 2px 2px 10px black;
+}
+.red{
+    color: red;
 }
 .otheroption{ 
     display: flex;
@@ -138,7 +144,6 @@ select{
     grid-column: 1;
     font-size: 2em;
     color: white;
-
 }
 .tituloSimula{
     grid-column: 1 / -1;
@@ -151,26 +156,22 @@ select{
     margin: 20px 0px;
     font-weight: lighter;
 }
-.opção,  .qntd{
+.opção{
     display: inline;
     border-left: 5px solid orange; 
     padding-left: 5px;
-}
-
-.qntd input{
-    width: 190px;
-    font-size: 1em;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    border-bottom: 1px solid rgb(255, 166, 0);
-    color: white;
 }
 .opção{
     outline: none;
     border-bottom: 1px solid rgb(255, 166, 0);
     width: 300px;
     background: transparent;
+}
+#forma{
+    margin: 0px 0px 20px 0px;
+}
+.sabormassa{
+    margin: 25px 0px;
 }
 .massa{
     grid-row: 2 / 2;
@@ -186,12 +187,13 @@ select{
     margin: 20px;
     height: 50px;
     letter-spacing: .2em;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px black;
 }
 .btnSimula:hover{
-    transition: 80ms linear;
-    height: 60px;
+    transition: 200ms linear;
+    box-shadow: 1px 1px 10px black;
 }
-
 .resposta{
     display: none;
     width: 500px;
@@ -201,16 +203,9 @@ select{
     grid-row: 5;
 }
 .resposta{
-    font-size: 2em;
+    font-size: 1.8em;
     color: white;
 }
-.red{
-    color: rgb(255, 0, 0);
-}
-.green{
-    color: rgb(0, 255, 106);
-}
-
 .redessociais{
     grid-column: 2;
     grid-row: 4;
@@ -225,7 +220,6 @@ select{
     border-left: 5px solid orange;
     padding-left: 5px;
 }
-
 .iconify{
     font-size: 4em;
     color: black;
@@ -240,8 +234,7 @@ select{
 }
 .scroll{
     overflow-x: scroll;
-    height: 100vh;
-    height: 700px;
+    height: 650px;
 }
 .img{
     display: flex;
@@ -250,6 +243,8 @@ select{
     margin-left: 5px;
     width: 500px;
     height: auto;
+    border-left: 4px double red;
+    border-right: 4px double red;
 }
 #titulo-scroll{
     font-family: 'Dancing Script';
@@ -281,6 +276,14 @@ select{
     }
     100%{
         opacity: 0;
+    }
+}
+@keyframes btn {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
     }
 }
 ::placeholder{

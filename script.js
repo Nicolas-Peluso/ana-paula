@@ -1,4 +1,4 @@
-var pedaços = document.querySelector("#pedaco");
+var forma = document.querySelector("#forma");
 var recheio = document.querySelector(".recheio");
 var massa = document.querySelector(".sabormassa");
 var detalhes = document.querySelector("#detalhes");
@@ -10,97 +10,34 @@ var finalPrice = 0;
 var div = document.createElement("div");
 
 form.addEventListener("submit", e => { 
-    e.preventDefault();verify() });
-function verify(){
-    div.style.display = "none";
-    if(pedaços.value <= 150 && pedaços.value >= 30){
-        legendPedaço.classList.add("green");
-        legendPedaço.classList.remove("red");
+    e.preventDefault();
+    simulation(forma.value, recheio.value, massa.value, detalhes.checked)});
 
-        simulation(pedaços.value, recheio.value, massa.value, detalhes.checked);
-    } else{
-        legendPedaço.classList.remove("green");
-        legendPedaço.classList.add("red");
-    }
-}
+function simulation(forma, Recheio, Massa, Enfeite){
 
-function simulation(Pedaços, Recheio, Massa, Enfeite){
-
-    
-
-    if(Pedaços >= 30 && Pedaços < 39){ 
-        finalPrice = 50; 
-        if(Enfeite == true){ 
-            finalPrice = finalPrice + 10
-            }   
-        }
-        else if(Pedaços >= 40 && Pedaços < 49){
-        finalPrice = 60;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-}
-    else if(Pedaços >= 50 && Pedaços < 59){
-        finalPrice = 70;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
+    finalPrice = 0
+    switch(forma){
+        case "15":
+            if(Enfeite == true) finalPrice += 5;
+            if(Recheio == "alpino" || Recheio == "mousse trufado" || Recheio == "trufado branco" || Recheio == "trufado preto" || Recheio == "trufado meio branco e meio preto" || Recheio == "trufado com cereja") finalPrice += 15
+            finalPrice += 45;
+            break;
+        case "30":
+            if(Enfeite == true) finalPrice += 5;
+            if(Recheio == "alpino" || Recheio == "mousse trufado" || Recheio == "trufado branco" || Recheio == "trufado preto" || Recheio == "trufado meio branco e meio preto" || Recheio == "trufado com cereja") finalPrice += 10
+            finalPrice += 70;
+            break;
+        case "35":
+            if(Enfeite == true) finalPrice += 5;
+            if(Recheio == "alpino" || Recheio == "mousse trufado" || Recheio == "trufado branco" || Recheio == "trufado preto" || Recheio == "trufado meio branco e meio preto" || Recheio == "trufado com cereja") finalPrice += 10
+            finalPrice += 80;
+            break;
+        case "45":
+            if(Enfeite == true) finalPrice += 5;
+            if(Recheio == "alpino" || Recheio == "mousse trufado" || Recheio == "trufado branco" || Recheio == "trufado preto" || Recheio == "trufado meio branco e meio preto" || Recheio == "trufado com cereja") finalPrice += 10
+            finalPrice += 105;
+            break;
     }
-    else if(Pedaços >= 60 && Pedaços < 69){
-        finalPrice = 80;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 70 && Pedaços < 79){
-        finalPrice = 90;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 80 && Pedaços < 89){
-        finalPrice = 100;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 90 && Pedaços < 99){
-        finalPrice = 110;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 100 && Pedaços < 109){
-        finalPrice = 120;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 110 && Pedaços < 119){
-        finalPrice = 130;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 120 && Pedaços < 129){
-        finalPrice = 140;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 130 && Pedaços < 139){
-        finalPrice = 150;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-    }
-    else if(Pedaços >= 140 && Pedaços <= 150){
-        finalPrice = 160;
-        if(Enfeite == true){
-            finalPrice = finalPrice + 10
-        }
-      }
-
       function temINfeite(e){
         if(e == true){ 
             var tem = "com enfeites";
@@ -112,11 +49,11 @@ function simulation(Pedaços, Recheio, Massa, Enfeite){
         }
       }
 
-       div.innerHTML = `<p>seu bolo de ${Recheio} com a massa de ${Massa}, ${temINfeite(Enfeite)}, fica em ${finalPrice},00R$  <br></p> <p class="red">NOTA!</p>
-       <p id="teste"> para fazer o pedido do bolo basta nos enviar uma menssagem pelos meios indicado a cima</p>`;
+       div.innerHTML = `<p>seu bolo de ${Recheio} com a massa de ${Massa} e forma de ${forma} pedaços, ${temINfeite(Enfeite)}, fica em ${finalPrice},00R$  <br></p> <p class="red">ATENÇÃO!</p>
+       <p>SE O RECHEIO DO BOLO POSSUIR FRUTA(S) UM ACRESSIMO DE 5R$ SERÁ COBRADO</p>`;
        resposta.appendChild(div);
-      resposta.style.display = "block";
-      div.style.display = "block"
+       resposta.style.display = "block";
+       div.style.display = "block"
 }
 
 
