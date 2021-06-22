@@ -50,7 +50,7 @@ function simulation(forma, Recheio, Massa, Enfeite){
       }
 
        div.innerHTML = `<p>seu bolo de ${Recheio} com a massa de ${Massa} e forma de ${forma} pedaços, ${temINfeite(Enfeite)}, fica em ${finalPrice},00R$  <br></p> <p class="red">ATENÇÃO!</p>
-       <p>SE O RECHEIO DO BOLO POSSUIR FRUTA(S) UM ACRESSIMO DE 5R$ SERÁ COBRADO</p>`;
+       <p>RECHEIOS COM FRUTA(S) RECEBERA UM ACRESSIMO DE 5R$</p>`;
        resposta.appendChild(div);
        resposta.style.display = "block";
        div.style.display = "block"
@@ -58,50 +58,29 @@ function simulation(forma, Recheio, Massa, Enfeite){
 
 
 var btn = document.querySelector(".button-info");
-var simulaPage = document.querySelector(".containerSimula");
-var heigthSimula = simulaPage.clientHeight;
-
-btn.addEventListener("click", e => scrollSimula(heigthSimula));
 var btnNav = document.querySelector(".bolosNav");
-var cakePage = document.querySelector(".container-scroll");
-var heigthCake = cakePage.clientHeight;
-
-btnNav.addEventListener("click", ex => cake(heigthCake));
-
-var image = document.querySelector(".imagem");
 var btnTop = document.querySelector(".goBackTop");
-var heigthImage = image.clientHeight;
-
-btnTop.addEventListener("click", er => scrollTop());
-
-var quemSomos = document.querySelector(".quemSomosContainer")
+const gobackTop = btnTop.clientHeight
 var btnQuemSomos = document.querySelector(".QuemSomosNav")
 
-btnQuemSomos.addEventListener("click", r => {
-    scrollToQuemSomos(quemSomos.clientHeight)
+btnTop.addEventListener("click", e => scroll({top: -gobackTop, behavior:"smooth"}))
+
+const items = [btn, btnNav, btnQuemSomos]
+
+items.forEach(item => {
+    item.addEventListener("click", scrollById)
 })
 
-function scrollTop(){ window.scrollTo({
-    top: -heigthImage, 
-    behavior: "smooth"
-}
-)};
+function scrollById(event){
+    event.preventDefault()
 
-function scrollSimula(h){
-        window.scrollTo({
-            top: h,
-            behavior:"smooth"
-    })
-};
-function cake(hC){
-    window.scrollTo({
-        top: hC + 600,
-        behavior: "smooth"
-    })
-};
-function scrollToQuemSomos(hQ){
-    window.scrollTo({
-        top: hQ + 1600,
-        behavior: "smooth"
+    const element = event.target
+    const atribut = element.getAttribute('href') 
+    const section = document.querySelector(atribut)
+    const sectionTop = section.offsetTop
+
+    scroll({
+         top: sectionTop,
+         behavior: "smooth"
     })
 }

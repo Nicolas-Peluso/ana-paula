@@ -2,10 +2,12 @@
 
 *{
     padding: 0%;
-    margin: 0%;
-    
+    margin: 0%;    
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 body{
     background-color: rgb(88, 88, 88);
 }
@@ -66,6 +68,7 @@ select{
     bottom: 50%;
     color: white;
     animation: opacity 1s linear reverse;
+    position: relative;
 }
 .info h1{
     font-size: 1.8em;
@@ -77,22 +80,22 @@ select{
     margin: 20px 0px 0px 0px;
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.671);
 }
-.info button{
+.info a{
     width: 100%;
-    height: 50px;
-    margin: 20px 0px;
+    padding: 20px;
+    margin: 0px 0px;
     background: linear-gradient(90deg, #3C3B3F, #605C3C);
     text-transform: uppercase;
     letter-spacing: .2em;
-    color: white;
     cursor: pointer;
-    outline: none;
     border: none;
     box-shadow: 10px 10px 10px black;
     transition: 200ms linear;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
 }
-.info button:hover{
-    
+.info a:hover{
     box-shadow: 2px 2px 10px black;
 }
 .red{
@@ -120,19 +123,14 @@ select{
     width: 50px;
     object-fit: cover;
 }
-.otheroption .falecom{  
-    text-decoration: underline;
-}
 .bolosNav{
     cursor: pointer;
 }
 .QuemSomosNav{
     cursor: pointer;
-}
-.falecom{
     border-right: 20px double orange;
-    padding-right: 15px;
-    margin-right: 15px;
+    padding: 0px 20px;
+    margin: 0px 10px;
 }
 .containerSimula{
     max-width: 1200px;
@@ -165,11 +163,11 @@ select{
     display: inline;
     border-left: 5px solid orange; 
     padding-left: 5px;
+    width: 90%;
 }
 .opção{
     outline: none;
     border-bottom: 1px solid rgb(255, 166, 0);
-    width: 300px;
     background: transparent;
 }
 #forma{
@@ -201,8 +199,8 @@ select{
 }
 .resposta{
     display: none;
-    width: 500px;
-    height: 250px;
+    width: 50%;
+    height: 100%;
     border-left: 5px solid orange;
     grid-column: 2;
     grid-row: 5;
@@ -235,11 +233,13 @@ select{
     border-radius: 10px;
 }
 .container-scroll{
-    height: 100vh;
+    height: 90vh;
+    
 }
 .scroll{
     overflow-x: scroll;
-    height: 650px;
+    height: 850px;
+    overflow-y: hidden;
 }
 .img{
     display: flex;
@@ -260,24 +260,23 @@ select{
     color: white;
 }
 .line-scroll{
-    width: 500px;
+    width: 50%;
     height: 8px;
     background-color: rgb(255, 81, 0);
     box-shadow: 2px 2px 5px black;
     margin: 10px auto;
 }
 .quemSomosContainer{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    grid-template-rows: repeat(3, minmax(auto, 350px));
+    display: flex;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0);
-    color: white;
+    color: rgb(255, 255, 255);
+    margin: 100px 0px 0px 0px;    
 }
 .tituloQuemSomos{
     font-family: 'dancing script';
     font-size: 4em;
     text-align: center;
-    grid-column: 1 / -1;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.871);
     text-transform: uppercase;
 }
@@ -293,30 +292,26 @@ select{
     margin: 5px;
 }
 .quemSomosContainer img{
-    width: 350px;
-    height: 350px;
+    object-fit: scale-down;
 }
 .comoComeçou{
-    width: 350px;
-    height: 350px;
+    width: 75%;
+    height: 35%;
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.103);
     border-radius: 5px;
     margin: 50px;
-    grid-column: 1;
-    grid-row: 2;
 }
 .OndeChegaremos{
-    grid-column: 1;
-    grid-row: 2;
-    width: 350px;
-    height: 350px;
+    width: 75%;
+    height: 35%;
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.103);
     border-radius: 5px;
-    margin: 50px 500px;
+    margin: 50px;
+}
+.OndeChegaremos p, .comoComeçou p{
+    padding: 50px;
 }
 .nossaFamilia{
-    grid-column: 2;
-    grid-row: 2;
     padding: 5px;
     background-color: rgba(0, 255, 255, 0);
     position: relative;
@@ -324,44 +319,83 @@ select{
     height: 600px;
     border-radius: 5px;
     margin: 0px 20px;
-    width: 1200px;
 }
 .fotoPrincipal img{
-    border-radius: 50%;
     position: absolute;
     bottom: 200px;
-    right: 100px;
+    right: 350px;
+    height: 350px;
 }
 .vanessa img{
-    border-radius: 50%;
+   height: 350px;
 }
 
-@media(max-width: 700px){
+@media(max-height: 800px){
     .quemSomosContainer{
-        margin: 80% 0px auto;
+        margin: 60% 0px 0px;
+    }
+    .img img{
+        margin-left: 2px;
+        width: 100vw;
     }
 }
-@media(max-width: 1670px){
+
+@media(max-width: 1600px){
     .quemSomosContainer{
         display: flex;
         flex-direction: column;
-        
     }
     .OndeChegaremos{
         margin: 50px;
     }
     .nossaFamilia{
         height: 1000px;
-        background-color: violet;
     }
     .fotoPrincipal img{
-        right: auto;
-        bottom: auto;
-        position: relative;
+        bottom: 0px;
+        right: 0px;
+        height: 350px;
+    }
+    .containerSimula{
+        display: flex;
+        flex-direction: column;
+    }
+    .otheroption{ 
+        bottom: 120%;
+        margin-left: 0px;
+    }
+    .fe{
+        justify-content: space-between;
+    }
+    .otheroption a{
+        margin-left: 25px;
+    }
+    .QuemSomosNav{
+        padding: 0px 15px;
+        margin: 0px 15px;
+    }
+    .info{
+        margin: 0px 20px;
+        width: 200px;
+        height: 250px;
+    }
+    .container-scroll{
+        height: 100vh;
+    }
+    .opção{
+        padding-left: 5px;
+        width: 90%;
+    }
+    .containerSimula{
+        padding-left: 5px;
     }
 }
 
-
+@media(max-width: 350px){
+    .nossaFamilia{
+        height: 1100px;
+    }
+}
 @keyframes zoom {
     0%{
         transform: scale(1.3);

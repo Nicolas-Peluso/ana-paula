@@ -10,34 +10,31 @@
     <title>PAULA E NE</title>
 </head>
 <body>
-    
     <div class="goBackTop">
-        <p class="iconify" data-inline="true" data-icon="mdi:arrow-up-bold-circle"></p>
+            <p class="iconify" data-inline="true" data-icon="mdi:arrow-up-bold-circle"></p>
     </div>
-
     <header>
         <section class="imagem">
             <img src="banners/jacob-schwartz-enVg_Vtsw1c-unsplash.jpg" alt="bolo">
             <div class="info">
                 <h1>ANA-PAULA E VANESSA CAMARGO</h1>
                 <p>faça um orçamento conosco</p>
-                <button class="button-info">clique e faça um orçamento</button>
+               <a href=".containerSimula" class="button-info">clique e faça um orçamento</a>
             </div>
             <nav class="otheroption fe">
-                <a class="bolosNav">Bolos</a>
-                <a class="QuemSomosNav">quem somos</a>                
-                <a href="#" class="falecom">fale conosco</a>
+                <a href=".container-scroll" class="bolosNav">Bolos</a>
+                <a href=".quemSomosContainer" class="QuemSomosNav">quem somos</a>                
             </nav>
         </section>
     </header>
 
     <main>
         <form action="" class="form">
-                <div class="containerSimula">
+            <div class="containerSimula">
                 <h1 class="tituloSimula">faça uma simulação de orçamento</h1>
 
                                 <fieldset class="opção">
-                                    <legend class="legendPedaço">nós trablhamos com formas de:</legend>
+                                    <legend>nós trablhamos com formas de:</legend>
                                     <select name="forma" id="forma" class="select">
                                         <option value="15">15 pedaços redonda</option>
                                         <option value="30">30 pedaços redonda</option>
@@ -46,7 +43,7 @@
                                     </select>
                                 </fieldset>
                                 <fieldset class="opção Bolo">
-                                    <legend>selecione o recheio</legend>
+                                    <legend class="recheioLegend">selecione o recheio</legend>
                                         <select name="recheio" class="select recheio">
                                             <option value="alpino">alpino</option>
                                             <option value="beijinho">beijinho</option>
@@ -99,10 +96,11 @@
                                     <p> possui uma foto de referencia? envie por whatsapp, email e ou instagram</p>
                                 </fieldset>
                                 <button class="btnSimula">TUDO CERTO</button>
-                                <div class="resposta">
-                                    
-                                </div>
+                               
                     </form>
+                     <div class="resposta">
+                                    
+                    </div>
                         <div class="redessociais">
                             <h2 class="sub-titleredes">Voce pode nos contatar pelos meios indicados Abaixo, Basta clicar no Icone desejado</h2>
                             <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511973325318" target="_blank">
@@ -140,27 +138,28 @@
         </section>
     </div>
 
-    <div class="quemSomosContainer">
-        <h1 class="tituloQuemSomos">quem somos?</h1>
-        <section class="comoComeçou">
-            <h2 class="subQuem">como começou?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloremque reiciendis nulla odit eum ex praesentium rerum pariatur similique voluptates. Quia ad nulla laudantium veritatis consequuntur molestiae esse rem beatae.</p>
-        </section>
-        <section class="OndeChegaremos">
-            <h2 class="subQuem">onde chegaremos</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam officia, a necessitatibus sunt excepturi quaerat omnis qui voluptatem sed, nobis tempora, cumque pariatur velit perferendis cum in assumenda fugiat.</p>
-        </section>
-        <section class="nossaFamilia">
-            <h2 class="subQuem">nossa familia</h2>
-            <picture class="vanessa">
-                <img src="vanessa.jpg" alt="temp">
-            </picture>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel ea error nam cumque! Ut dolorum voluptatibus expedita, animi repellat dignissimos adipisci ipsum accusamus, et porro voluptas temporibus optio numquam omnis.</p>
-            <picture class="fotoPrincipal">
-                <img src="123712185_2153389988125848_4435614241926228983_n.jpg" alt="temp">
-            </picture>
-        </section>
-    </div>
+        <div class="quemSomosContainer">
+            <h1 class="tituloQuemSomos">quem somos?</h1>
+            <div class="line-scroll"></div>
+            <section class="comoComeçou">
+                <h2 class="subQuem">como começou?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloremque reiciendis nulla odit eum ex praesentium rerum pariatur similique voluptates. Quia ad nulla laudantium veritatis consequuntur molestiae esse rem beatae.</p>
+            </section>
+            <section class="OndeChegaremos">
+                <h2 class="subQuem">onde chegaremos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam officia, a necessitatibus sunt excepturi quaerat omnis qui voluptatem sed, nobis tempora, cumque pariatur velit perferendis cum in assumenda fugiat.</p>
+            </section>
+            <section class="nossaFamilia">
+                <h2 class="subQuem">nossa familia</h2>
+                <picture class="vanessa">
+                    <img src="vanessa.jpg" alt="temp">
+                </picture>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel ea error nam cumque! Ut dolorum voluptatibus expedita, animi repellat dignissimos adipisci ipsum accusamus, et porro voluptas temporibus optio numquam omnis.</p>
+                <picture class="fotoPrincipal">
+                    <img src="123712185_2153389988125848_4435614241926228983_n.jpg" alt="temp">
+                </picture>
+            </section>
+        </div>
 
         <script src="script.js"></script>
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
