@@ -69,20 +69,27 @@ var heigthCake = cakePage.clientHeight;
 btnNav.addEventListener("click", ex => cake(heigthCake));
 
 var image = document.querySelector(".imagem");
-var btn = document.querySelector(".goBackTop");
+var btnTop = document.querySelector(".goBackTop");
 var heigthImage = image.clientHeight;
 
-btn.addEventListener("click", er => scrollTop());
+btnTop.addEventListener("click", er => scrollTop());
+
+var quemSomos = document.querySelector(".quemSomosContainer")
+var btnQuemSomos = document.querySelector(".QuemSomosNav")
+
+btnQuemSomos.addEventListener("click", r => {
+    scrollToQuemSomos(quemSomos.clientHeight)
+})
 
 function scrollTop(){ window.scrollTo({
-    top: heigthImage - 959, 
+    top: -heigthImage, 
     behavior: "smooth"
 }
 )};
 
 function scrollSimula(h){
         window.scrollTo({
-            top: h + 350,
+            top: h,
             behavior:"smooth"
     })
 };
@@ -92,3 +99,9 @@ function cake(hC){
         behavior: "smooth"
     })
 };
+function scrollToQuemSomos(hQ){
+    window.scrollTo({
+        top: hQ + 1600,
+        behavior: "smooth"
+    })
+}
