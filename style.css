@@ -62,8 +62,8 @@ select{
 .info{
     margin: 0px 20px;
     border-left: 20px solid rgb(243, 158, 0);
-    max-width: 500px;
-    height: 150px;
+    width: 500px;
+    height: 200px;
     padding-left: 20px;
     position: relative;
     bottom: 50%;
@@ -84,7 +84,7 @@ select{
 .info a{
     width: 100%;
     padding: 20px;
-    margin: 0px 0px;
+    margin: -20px 0px;
     background: linear-gradient(90deg, #3C3B3F, #605C3C);
     text-transform: uppercase;
     letter-spacing: .2em;
@@ -105,34 +105,33 @@ select{
 .otheroption{ 
     display: flex;
     position: absolute;
-    top: 50px;
-    margin: 20px;
     border-left: 20px double rgb(243, 158, 0);
-}
-.fe{
-    justify-content: center;
-    align-items: center;
+    border-right: 20px double orange;
+    top: 2%;
+    left: 0%;
 }
 .otheroption a{
-    margin-left: 50px;
+    margin: 0px 25px;
     font-size: 2em;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: lighter;
     color: white;
 }
-.otheroption img{
-    width: 50px;
-    object-fit: cover;
-}
 .bolosNav{
     cursor: pointer;
 }
+.bolosNav:hover{
+    color: rgb(255, 148, 77); 
+    transition: background .5s;
+}
 .QuemSomosNav{
     cursor: pointer;
-    border-right: 20px double orange;
-    padding: 0px 20px;
-    margin: 0px 10px;
+    margin: 0px 0px;
+}
+.QuemSomosNav:hover{
+    color: rgb(255, 148, 77); 
+    transition: background .5s;
 }
 .containerSimula{
     max-width: 1200px;
@@ -165,9 +164,7 @@ select{
     display: inline;
     border-left: 5px solid orange; 
     padding-left: 5px;
-    width: 90%;
-}
-.opção{
+    width: 90%; 
     outline: none;
     border-bottom: 1px solid rgb(255, 166, 0);
     background: transparent;
@@ -176,7 +173,7 @@ select{
     margin: 0px 0px 20px 0px;
 }
 .sabormassa{
-    margin: 25px 0px;
+    margin: 5px 0px;
 }
 .massa{
     grid-row: 2 / 2;
@@ -201,7 +198,7 @@ select{
 }
 .resposta{
     display: none;
-    width: 50%;
+    width: 90%;
     height: 100%;
     border-left: 5px solid orange;
     grid-column: 2;
@@ -240,7 +237,7 @@ select{
 }
 .scroll{
     overflow-x: scroll;
-    height: 850px;
+    height: 750px;
     overflow-y: hidden;
 }
 .img{
@@ -273,7 +270,7 @@ select{
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0);
     color: rgb(255, 255, 255);
-    margin: 100px 0px 0px 0px;    
+    margin: 150px 0px 0px 0px;    
 }
 .tituloQuemSomos{
     font-family: 'dancing script';
@@ -351,7 +348,7 @@ select{
         margin: 50px;
     }
     .nossaFamilia{
-        height: 1000px;
+        height: 1100px;
     }
     .fotoPrincipal img{
         bottom: 0px;
@@ -362,21 +359,21 @@ select{
         display: flex;
         flex-direction: column;
     }
-    .otheroption{ 
-        bottom: 120%;
+    .otheroption a{
         margin-left: 0px;
     }
-    .otheroption a{
-        margin-left: 25px;
-    }
     .QuemSomosNav{
-        padding: 0px 15px;
-        margin: 0px 15px;
+        padding: 0px 0px 0px 50px;
+        margin: 0px 0px 0px 0px;
     }
     .info{
-        margin: 0px 20px;
-        width: 200px;
+        margin: 0px 0px;
+        width: 90%;
         height: 250px;
+    }
+    .info a{
+        width: 50%;
+        margin: 0px 0px;
     }
     .container-scroll{
         height: 100vh;

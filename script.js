@@ -54,33 +54,33 @@ function simulation(forma, Recheio, Massa, Enfeite){
        resposta.appendChild(div);
        resposta.style.display = "block";
        div.style.display = "block"
-}
+};
 
 
 var btn = document.querySelector(".button-info");
 var btnNav = document.querySelector(".bolosNav");
 var btnTop = document.querySelector(".goBackTop");
-const gobackTop = btnTop.clientHeight
-var btnQuemSomos = document.querySelector(".QuemSomosNav")
+const gobackTop = btnTop.clientHeight;
+var btnQuemSomos = document.querySelector(".QuemSomosNav");
 
-btnTop.addEventListener("click", e => scroll({top: -gobackTop, behavior:"smooth"}))
+btnTop.addEventListener("click", e => scroll({top: -gobackTop, behavior:"smooth"}));
 
-const items = [btn, btnNav, btnQuemSomos]
+const items = [btn, btnNav, btnQuemSomos];
 
 items.forEach(item => {
     item.addEventListener("click", scrollById)
-})
+});
 
 function scrollById(event){
-    event.preventDefault()
+    event.preventDefault(); 
 
-    const element = event.target
-    const atribut = element.getAttribute('href') 
-    const section = document.querySelector(atribut)
-    const sectionTop = section.offsetTop
+    const element = event.target;
+    const atribut = element.getAttribute('href');
+    const section = document.querySelector(atribut);
+    const sectionTop = section.offsetTop;
 
-    scroll({
+     scroll({
          top: sectionTop,
          behavior: "smooth"
-    })
-}
+        })
+};
