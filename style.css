@@ -325,6 +325,7 @@ select{
 }
 .nossaFamilia img{
     border-radius: 50%;
+    max-width: 80%;
 }
 .fotoPrincipal img{
     position: absolute;
@@ -362,6 +363,7 @@ footer{
 @media(max-height: 700px){
     .quemSomosContainer{
         margin: 60% 0px 0px;
+        background-color: aqua;
     }
     .img img{
         margin-left: 2px;
