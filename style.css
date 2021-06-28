@@ -11,10 +11,6 @@ a{
 body{
     background-color: rgb(88, 88, 88);
 }
-img{
-    width: 100%;
-    height: 100%;
-}
 legend{
     color: white;
     font-size: 1.5em;
@@ -105,13 +101,11 @@ select{
 .otheroption{ 
     display: flex;
     position: absolute;
-    border-left: 20px double rgb(243, 158, 0);
-    border-right: 20px double orange;
     top: 2%;
-    left: 0%;
+    left: 6%;
 }
 .otheroption a{
-    margin: 0px 25px;
+    margin: 0px 50px;
     font-size: 2em;
     text-decoration: none;
     text-transform: uppercase;
@@ -232,22 +226,38 @@ select{
     border-radius: 10px;
 }
 .container-scroll{
-    height: 90vh;
-    
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(105, 105, 105), rgb(160, 160, 160));
+
+}
+.infoSlide{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    border: 5px solid orange;
+    color: white;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(95, 95, 95);
+    position: relative;
+    bottom: 90px;
+    left: 40px;
 }
 .scroll{
     overflow-x: scroll;
-    height: 750px;
+    height: 590px;
     overflow-y: hidden;
+   
 }
 .img{
     display: flex;
 }
 .img img{
     margin-left: 20px;
-    width: 500px;
+    max-width: 450px;
     height: auto;
-    box-shadow: 10px 2px 10px rgba(0,0,0,.5);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.193);
 }
 #titulo-scroll{
     font-family: 'Dancing Script';
@@ -266,8 +276,6 @@ select{
     margin: 10px auto;
 }
 .quemSomosContainer{
-    display: flex;
-    flex-direction: column;
     background-color: rgba(255, 255, 255, 0);
     color: rgb(255, 255, 255);
     margin: 150px 0px 0px 0px;    
@@ -290,81 +298,99 @@ select{
     font-size: 1.5em;
     margin: 5px;
 }
-.quemSomosContainer img{
-    object-fit: scale-down;
-}
 .comoComeçou{
-    width: 75%;
+    max-width: 900px;
     height: 35%;
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.103);
     border-radius: 5px;
     margin: 50px;
 }
 .OndeChegaremos{
-    width: 75%;
+    max-width: 900px;
     height: 35%;
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.103);
     border-radius: 5px;
-    margin: 50px;
+    margin: 50px auto;
 }
 .OndeChegaremos p, .comoComeçou p{
-    padding: 50px;
+    padding: 50px 0px;
 }
 .nossaFamilia{
     padding: 5px;
-    background-color: rgba(0, 255, 255, 0);
-    position: relative;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, .103);
-    height: 600px;
     border-radius: 5px;
-    margin: 0px 20px;
+    margin: 0px auto;
+    max-width: 800px;
+    position: relative;
+}
+.nossaFamilia img{
+    border-radius: 50%;
 }
 .fotoPrincipal img{
     position: absolute;
-    bottom: 200px;
-    right: 350px;
-    height: 350px;
-}
-.vanessa img{
-   height: 350px;
+    left: 450px;
+    top: 80px;
 }
 
-@media(max-height: 800px){
+.nossaFamilia p{
+    max-width: 950px;
+    margin: 50px 0px;
+}
+footer{
+    background: linear-gradient(90deg, rgb(255, 180, 41), rgb(255, 132, 0));
+    height: 200px;
+    
+}
+.infosFooter{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4em;   
+}
+.infosFooter a{
+     color: black;
+}
+.infosFooter a:hover{
+    text-decoration: underline;
+    color: white;
+}
+@media(max-height: 400px){
+    .quemSomosContainer{
+        margin: 250px 0px 0px 0px;
+}
+}
+
+@media(max-height: 700px){
     .quemSomosContainer{
         margin: 60% 0px 0px;
     }
     .img img{
         margin-left: 2px;
-        width: 100vw;
+        width: 90vw;
     }
 }
 
-@media(max-width: 1600px){
-    .quemSomosContainer{
-        display: flex;
-        flex-direction: column;
-    }
-    .OndeChegaremos{
-        margin: 50px;
-    }
+@media(max-width: 1000px){
+    
     .nossaFamilia{
         height: 1100px;
-    }
-    .fotoPrincipal img{
-        bottom: 0px;
-        right: 0px;
-        height: 350px;
     }
     .containerSimula{
         display: flex;
         flex-direction: column;
+    }
+    .fotoPrincipal img{
+        left: 50px;
+        top: 600px;
+    }.vanessa img{
+        width: 250px;
+        margin: 0% 0px 0px 60px;
     }
     .otheroption a{
         margin-left: 0px;
     }
     .QuemSomosNav{
         padding: 0px 0px 0px 50px;
-        margin: 0px 0px 0px 0px;
+        margin: 0px;
     }
     .info{
         margin: 0px 0px;
