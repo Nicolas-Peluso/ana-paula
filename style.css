@@ -325,7 +325,6 @@ select{
 }
 .nossaFamilia img{
     border-radius: 50%;
-    max-width: 80%;
 }
 .fotoPrincipal img{
     position: absolute;
@@ -340,7 +339,6 @@ select{
 footer{
     background: linear-gradient(90deg, rgb(255, 180, 41), rgb(255, 132, 0));
     height: 200px;
-    
 }
 .infosFooter{
     text-align: center;
@@ -354,6 +352,8 @@ footer{
     text-decoration: underline;
     color: white;
 }
+
+
 @media(max-height: 400px){
     .quemSomosContainer{
         margin: 250px 0px 0px 0px;
@@ -363,7 +363,6 @@ footer{
 @media(max-height: 700px){
     .quemSomosContainer{
         margin: 60% 0px 0px;
-        background-color: aqua;
     }
     .img img{
         margin-left: 2px;
@@ -382,7 +381,7 @@ footer{
     }
     .fotoPrincipal img{
         left: 50px;
-        top: 600px;
+        top: 620px;
     }.vanessa img{
         width: 250px;
         margin: 0% 0px 0px 60px;
