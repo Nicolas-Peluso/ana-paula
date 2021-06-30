@@ -1,3 +1,5 @@
+
+/*variaveis simulação*/
 var forma = document.querySelector("#forma");
 var recheio = document.querySelector(".recheio");
 var massa = document.querySelector(".sabormassa");
@@ -8,6 +10,16 @@ var form = document.querySelector(".form");
 var legendPedaço = document.querySelector(".legendPedaço");
 var finalPrice = 0;
 var div = document.createElement("div");
+
+/*variaveis map*/
+var map = document.querySelector(".map")
+var buttonMapClose = document.querySelector(".infoMap button")
+
+buttonMapClose.addEventListener("click", function(){
+    let infoMap = document.querySelector(".infoMap")
+    infoMap.style.display = "none"
+})
+
 
 form.addEventListener("submit", e => { 
     e.preventDefault();
@@ -50,12 +62,12 @@ function simulation(forma, Recheio, Massa, Enfeite){
       }
 
        div.innerHTML = `<p>seu bolo de ${Recheio} com a massa de ${Massa} e forma de ${forma} pedaços, ${temINfeite(Enfeite)}, fica em ${finalPrice},00R$  <br></p> <p class="red">ATENÇÃO!</p>
-       <p>RECHEIOS COM FRUTA(S) RECEBERA UM ACRESSIMO DE 5R$</p>`;
+       <p>RECHEIOS COM FRUTA(S) TERA UM ACRESSIMO DE 5R$</p>`;
        resposta.appendChild(div);
        resposta.style.display = "block";
        div.style.display = "block"
+       map.style.display = "block"
 };
-
 
 var btn = document.querySelector(".button-info");
 var btnNav = document.querySelector(".bolosNav");
