@@ -14,11 +14,9 @@ var div = document.createElement("div");
 /*variaveis map*/
 var map = document.querySelector(".map")
 var buttonMapClose = document.querySelector(".infoMap button")
+var infoMap = document.querySelector(".infoMap")
 
-buttonMapClose.addEventListener("click", function(){
-    let infoMap = document.querySelector(".infoMap")
-    infoMap.style.display = "none"
-})
+buttonMapClose.addEventListener("click", t => infoMap.style.display = "none")
 
 
 form.addEventListener("submit", e => { 
@@ -26,7 +24,7 @@ form.addEventListener("submit", e => {
     simulation(forma.value, recheio.value, massa.value, detalhes.checked)});
 
 function simulation(forma, Recheio, Massa, Enfeite){
-
+    
     finalPrice = 0
     switch(forma){
         case "15":

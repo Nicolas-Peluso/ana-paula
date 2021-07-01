@@ -310,12 +310,10 @@ select{
     overflow-x: scroll;
     height: 590px;
     overflow-y: hidden;
-     scroll-snap-type: x mandatory;
-    
+    scroll-snap-type: x mandatory;   
 }
 .img{
-    display: flex;
-   
+    display: flex; 
 }
 .img img{
     margin-left: 20px;
@@ -323,7 +321,6 @@ select{
     height: auto;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.193);
     scroll-snap-align: start;
-
 }
 #titulo-scroll{
     font-family: var(--fontTitulo);
