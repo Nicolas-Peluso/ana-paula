@@ -20,41 +20,34 @@ const maxImages = imgs.length - 1
 let actualImg = 0
 const next = document.querySelector(".next")
 const preview = document.querySelector(".preview")
-let pause = true;
-let Time = 10000;
+let Time;
 next.addEventListener("click", handleNext)
 preview.addEventListener("click", handlePreview)
 
+function BeginTimeOut() {
+    Time = setInterval(() => {
+        imgs.forEach(i => i.classList.remove("ativo"))
+        actualImg >= maxImages ? actualImg = 0 : actualImg++
+        imgs[actualImg].classList.add("ativo")
+    }, 3000)
+}
+BeginTimeOut()
+
 function handleNext() {
-    pause = false
-    Time += 100
-    console.log(Time)
+    clearInterval(Time)
+    BeginTimeOut()
     imgs.forEach(i => i.classList.remove("ativo"))
     actualImg >= maxImages ? actualImg = 0 : actualImg++
     imgs[actualImg].classList.add("ativo")
 }
 
 function handlePreview() {
-    pause = false
-    Time += 100
-    console.log(pause)
+    clearInterval(Time)
+    BeginTimeOut()
     imgs.forEach(i => i.classList.remove("ativo"))
     actualImg == 0 ? actualImg = maxImages : actualImg--
     imgs[actualImg].classList.add("ativo")
 }
-
-window.setTimeout(() => { pause = true }, Time > 15000 ? 1000 : Time)
-
-window.setInterval(() => {
-    if (pause) {
-        console.log(pause)
-        imgs.forEach(i => i.classList.remove("ativo"))
-        actualImg >= maxImages ? actualImg = 0 : actualImg++
-        imgs[actualImg].classList.add("ativo")
-    }
-}, 2000)
-
-
 
 buttonMapClose.addEventListener("click", t => infoMap.style.display = "none")
 
